@@ -5,6 +5,6 @@ Phtalic acid isomers are used in coatings because of there varying properties.
 
 This work initally uses Psi4's SAPT to understand intermolecular interactions between dimers of these isomers.
 
-The FTIR of each isomer is also investigated 
+A comparison of the FTIR of each isomer is also investigated 
 
 
