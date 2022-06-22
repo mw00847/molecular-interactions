@@ -1,10 +1,10 @@
-# OMP
-Understanding the interactions between phtalic acid isomers
+# MEA and CO2
+Understanding the interactions between MEA and CO2
 
-Phtalic acid isomers are used in coatings because of there varying properties.  
+MEA and similar amines can be used as carbon dioxide absorbers.
 
-This work initally uses Psi4's SAPT to understand intermolecular interactions between dimers of these isomers.
+This work initally uses Psi4's SAPT to understand intermolecular interactions between the molecules.  
 
-A comparison of the FTIR of each isomer is also investigated 
+
 
 
