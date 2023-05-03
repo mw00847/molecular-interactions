@@ -1,3 +1,9 @@
+
+
+
+#this looks at different isomers of phtalic acid and plots the elst, ind, disp and exchange decomposition energies using SAPT
+
+
 import psi4 
 import numpy as np
 
