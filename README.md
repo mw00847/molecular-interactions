@@ -2,11 +2,11 @@
 # Understanding the interactions between different molecules using FTIR, PCA, SAPT and other descriptors.  
 
 
-# abstract
+# Abstract
 
 Can specific interactions and wavenumber shifts between molecules be seen varying the concentration of each in a mixture using FTIR. Can these interactions then be calculated using QM/MM methods. What combinations of molecules does PCA pick out as interactions? are these chemically intuative? Using psi4 SAPT is there a bias that FTIR sees more favourably the exchange, electrostatic or other energy decomposition?
 
-# introduction
+# Introduction
 
 # FTIR blue and red shifts, 
 
