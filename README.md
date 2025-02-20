@@ -9,8 +9,6 @@ The aim of this project is to use FTIR spectroscopy, Quantum Mechanical (QM) cal
 
 In the case of the water acetone system, QM methods are used to sample different geometries of water at distances of between 2-4 angstroms from acetone. This provides features including frequency data, dipole moment, reduced mass, intensity, energy, geometry, coulomb matrices to be used with ML models.  With the inclusion of experimental FTIR data of the acetone mixtures as the target, the geometry of the acetone water complex can be reverse engineered using Grap Neural Networks.
 
-# Abstract
-
 # Method 
 1. Optimise the xyz complexes of acetone and water
 
