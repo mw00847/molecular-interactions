@@ -11,6 +11,7 @@ In the case of the water acetone system, QM methods are used to sample different
 
 # Method
 The FTIR has been collected on a Nicolet iD7 with a resolution of 4cm-1. acetone = 10.csv with increasing water -> 0.csv = water. The peak centres of the mixtures is determined using Voigt peak fitting. 
+
 voigt_peak_centre.py 
 
 1. Optimise the xyz complexes of acetone and water
