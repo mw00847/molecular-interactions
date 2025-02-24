@@ -15,17 +15,21 @@ In the case of the water acetone system, QM methods are used to sample different
 2. Center the oxygen on the acetone carbonyl to 0,0,0
 
 3. Create ~500 geometries of water around the acetone.
+create_initial_geometries(G).ipynb
 
 4. Run QM using Psi4, calculating vibrational frequencies and other features.
+run_QM.py
 
 5. Create a .sdf file made up of the ~500 geometries.
+create_sdf(G).ipynb
 
 6. Subtract the QM frequencies from the experimental values, giving "delta frequencies" and add these to the features.
+add_delta_experiment_values(G).py
 
 7. Combine the QM features with the .sdf geometries into a graph to use in a GNN.
 
 8. Run the GNN model, looping through the "delta frequencies" where geometries that give a value close to 0 are similar to the experimental data.
-
+run_GNN.ipynb
 
 ![Delta Vibrations Diagram](./delta_vibrations.drawio.png)
 
@@ -44,6 +48,8 @@ https://doi.org/10.1063/1.1790431
 https://doi.org/10.1366/000370210792434396
 
 # Results
+
+![predictions from basic GNN](./predictions_from_basic_GNN.png)
 
 # References
 
