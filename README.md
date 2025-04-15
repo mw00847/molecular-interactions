@@ -24,19 +24,12 @@ create_initial_geometries(G).ipynb
 4. Run QM using Psi4, calculating vibrational frequencies and other features.
 run_QM.py
 
-5. Create a .sdf file made up of the ~1000 geometries.
-create_sdf(G).ipynb
+5. Filter the geometries that produce useful carbonyl related vibrations and create a graph for use in ML.
+create_graph.py
 
-6. Subtract the QM frequencies from the experimental values, giving "delta frequencies" and add these to the features.
-add_delta_experiment_values(G).py
+6. Train a conditional Graph Variational Autoencoder to generate new 3D water geometries around a fixed acetone molecule, conditioned on a target IR shift specific to concentration, minimising bond length and angle error.
+VAE.py
 
-7. Combine the QM features with the .sdf geometries into a graph to use in a GNN.
-
-8. Run the GNN model, looping through the "delta frequencies" where geometries that give a value close to 0 are similar to the experimental data.
-run_GNN.ipynb
-
-
-![Delta Vibrations Diagram](./delta_vibrations.drawio.png)
 
 
 # Background
