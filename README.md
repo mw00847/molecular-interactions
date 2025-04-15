@@ -10,25 +10,27 @@ The aim of this project is to use FTIR spectroscopy, Quantum Mechanical (QM) cal
 In the case of the water acetone system, QM methods are used to sample different geometries of water at distances of between 2-4 angstroms from acetone. This provides features including frequency data, dipole moment, reduced mass, intensity, energy, geometry, coulomb matrices to be used with ML models.  With the inclusion of experimental FTIR data of the acetone mixtures as the target, the geometry of the acetone water complex can be reverse engineered using Grap Neural Networks.
 
 # Method
-The FTIR has been collected on a Nicolet iD7 with a resolution of 4cm-1. acetone = 10.csv with increasing water -> 0.csv = water. The peak centres of the mixtures is determined using Voigt peak fitting. 
+The FTIR has been collected on a Nicolet iD7 with a resolution of 4cm-1. 
+acetone = 10.csv with increasing water -> 0.csv = water. 
 
-voigt_peak_centre.py 
+The peak centres of the mixtures is determined using Voigt peak fitting. 
+(voigt_peak_centre.py) 
 
 1. Optimise the xyz complexes of acetone and water
 
 2. Center the oxygen on the acetone carbonyl to 0,0,0
 
 3. Create ~1000 geometries of water around the acetone.
-create_initial_geometries(G).ipynb
+(create_initial_geometries(G).ipynb)
 
 4. Run QM using Psi4, calculating vibrational frequencies and other features.
-run_QM.py
+(run_QM.py)
 
 5. Filter the geometries that produce useful carbonyl related vibrations and create a graph for use in ML.
-create_graph.py
+(create_graph.py)
 
 6. Train a conditional Graph Variational Autoencoder to generate new 3D water geometries around a fixed acetone molecule, conditioned on a target IR shift specific to concentration, minimising bond length and angle error.
-VAE.py
+(VAE.py)
 
 
 
