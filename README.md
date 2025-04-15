@@ -35,6 +35,7 @@ add_delta_experiment_values(G).py
 8. Run the GNN model, looping through the "delta frequencies" where geometries that give a value close to 0 are similar to the experimental data.
 run_GNN.ipynb
 
+
 ![Delta Vibrations Diagram](./delta_vibrations.drawio.png)
 
 
