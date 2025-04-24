@@ -72,6 +72,10 @@ The predicted bond lengths for O–H₁ and O–H₂ remain close to the target 
 H–O–H Bond Angle 
 The model is less accurate with angle prediction. While the target angle is ~104.5°, fluctuations are seen across concentration indices, with angles as low as ~35° and as high as ~195°. 
 
+[predict OH bond angle](./predict_OH_bond_angle)
+
+[predict OH bond length](./predict_OH_bond_length)
+
 # References
 
 https://cs229.stanford.edu/proj2017/final-reports/5244394.pdf
