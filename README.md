@@ -122,6 +122,19 @@ https://www.nature.com/articles/s41467-023-36957-4
 Learning Molecular Mixture Properties Using Chemistry-Aware Graph Neural Networks.
 https://doi.org/10.1103/PRXEnergy.3.023006
 
+Auto-Encoding Variational Bayes.
+https://arxiv.org/abs/1312.6114
+
+Automatic Chemical Design Using a Data-Driven Continuous Representation of Molecules.
+https://doi.org/10.1021/acscentsci.7b00572
+
+A Generative Model for Molecular Distance Geometry.
+https://proceedings.neurips.cc/paper/2020/hash/fb60d411a5c5c4c7bd16c6d0bd1780b9-Abstract.html
+
+GemNet: Universal Directional Graph Neural Networks for Molecules.
+https://arxiv.org/abs/2106.08903
+
+
 
 
 
