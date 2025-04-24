@@ -64,6 +64,14 @@ The bond length error (O–H) stabilized around 0.4 Å, with early fluctuation l
 
 ![bond error](./bond_length_error.png)
 
+The trained Conditional GraphVAE model was evaluated for its ability to reconstruct geometries. The focus was on maintaining realistic O–H bond lengths (~0.96 Å) and the H–O–H bond angle (~104.5°) across different concentration conditions.
+
+O–H Bond Lengths
+The predicted bond lengths for O–H₁ and O–H₂ remain close to the target value in most concentration settings, but certain indices show elevated bond lengths (~2.0 Å), indicating occasional model instability. A dashed line at 0.96 Å provides a reference for the ideal value. These deviations suggest a need to strengthen the bond loss term or explore outlier geometries in training.
+
+H–O–H Bond Angle 
+The model is less accurate with angle prediction. While the target angle is ~104.5°, fluctuations are seen across concentration indices, with angles as low as ~35° and as high as ~195°. 
+
 # References
 
 https://cs229.stanford.edu/proj2017/final-reports/5244394.pdf
