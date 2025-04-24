@@ -78,13 +78,49 @@ The model is less accurate with angle prediction. While the target angle is ~104
 
 ![predict OH bond length](./predict_OH_bond_length.png)
 
+# Further work 
+
+The bond angle loss weighting should be increased to improve the accuracy of this property. 
+
+Look at using alternative constraints in the decoder. 
+
+Remove poor geometries 
+
+Include water acetone complexes with varied covalent bond lengths.
+
+Run QM on predicted geometries and loop this back into the model. 
+
+
 # References
 
 https://cs229.stanford.edu/proj2017/final-reports/5244394.pdf
 
 https://www.spectroscopyonline.com/view/five-reasons-why-not-every-peak-shift-in-infrared-ir-spectra-indicates-a-chemical-structure-change
 
+Graph neural networks for materials science and
+chemistry
+https://www.nature.com/articles/s43246-022-00315-6.pdf
 
+Infrared Spectra Prediction Using Attention-Based Graph Neural Networks. Digital Discovery, Royal Society of Chemistry.
+https://doi.org/10.1039/D3DD00254C
+
+Excess Gibbs Free Energy Graph Neural Networks for Predicting Composition-Dependent Activity Coefficients of Binary Mixtures. arXiv preprint.
+https://arxiv.org/abs/2407.18372
+
+Representation Learning with a β-Variational Autoencoder for Infrared Spectroscopy. 
+https://www.researchgate.net/publication/361453151
+
+Anomaly Detection in Fourier Transform Infrared Spectroscopy of Pharmaceutical Tablets Using Variational Autoencoders. Chemometrics and Intelligent Laboratory Systems, 
+https://doi.org/10.1016/j.chemolab.2023.104781
+
+Infrared Spectroscopy of Acetone–Water Liquid Mixtures: Molecular Organization and Hydrogen Bonding. 
+https://pubmed.ncbi.nlm.nih.gov/15267555
+
+Spectroscopy from Machine Learning by Accurately Representing Molecular Structures. Nature Communications
+https://www.nature.com/articles/s41467-023-36957-4
+
+Learning Molecular Mixture Properties Using Chemistry-Aware Graph Neural Networks.
+https://doi.org/10.1103/PRXEnergy.3.023006
 
 
 
