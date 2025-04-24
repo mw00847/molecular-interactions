@@ -33,7 +33,7 @@ The peak centres of the mixtures is determined using Voigt peak fitting.
 5. Filter the geometries that produce useful carbonyl related vibrations and create a graph for use in ML.
 (create_graph.py)
 
-6. Train a conditional Graph Variational Autoencoder to generate new 3D water geometries around a fixed acetone molecule, conditioned on a target IR shift specific to concentration, minimising bond length and angle error.
+6. A conditional Graph VAE was trained to generate new water geometries around the fixed acetone molecule.  Penalties where applied to the O-H bond length and H-O-H angles and Kullback-Leibler divergence was used with warm up scheduling.
 (VAE.py)
 
 
@@ -48,12 +48,15 @@ https://assets.thermofisher.com/TFS-Assets/CAD/Application-Notes/AN50733_E.pdf
 "The strong bathochromic shifts observed on methanol OH and acetone CO stretch IR bands are related to hydrogen bonds between these groups. Factor analysis separates the spectra into four acetone and four methanol principal factors." 
 https://doi.org/10.1063/1.1790431
 
-"Analysis  of  IR  spectra  of  ethylene  glycol  shows  that  thereare only a few contributing bands with solidly fixed vibrationalfrequencies,  which  only  change  in  relative  intensity  whentemperature is changed. It did not show any clear evidence ofan intrinsic frequency shift indicating the gradual weakening ofhydrogen bonding interaction. Only the relative population ofspecies,  e.g.,  strongly  bonded  and  dissociated  or  much  moreweakly  bonded  groups,  seems  to  be  changing.  IR  spectra  ofacetone   in   a   mixed   solvent   of   CHCl3/CCl4with   varyingcomposition  also  show  that  intrinsic  IR  frequency  does  notshift  appreciably.  Instead,  only  the  relative  contributions  ofhighly overlapped adjacent bands are changing."
+"Analysis  of  IR  spectra  of  ethylene  glycol  shows  that  there are only a few contributing bands with solidly fixed vibrational frequencies,  which  only  change  in  relative  intensity  when temperature is changed. It did not show any clear evidence of an intrinsic frequency shift indicating the gradual weakening of hydrogen bonding interaction. Only the relative population of species,  e.g.,  strongly  bonded  and  dissociated  or  much  more weakly  bonded  groups,  seems  to  be  changing.  IR  spectra  of acetone   in   a   mixed   solvent   of   CHCl3/CCl4with   varying composition  also  show  that  intrinsic  IR  frequency  does  notshift  appreciably.  Instead,  only  the  relative  contributions  of highly overlapped adjacent bands are changing."
 https://doi.org/10.1366/000370210792434396
 
 # Results
+Psi4 produces acetone vibrations across 4 modes, initially these are subtracted from 10 varying concentrations of water and acetone and used as the target using a GNN. These results show variation of +/- 5cm-1 from the calculated difference.
 
 ![predictions from basic GNN](./predictions_from_basic_GNN.png)
+
+
 
 # References
 
