@@ -90,6 +90,7 @@ Include water acetone complexes with varied covalent bond lengths.
 
 Run QM on predicted geometries and loop this back into the model. 
 
+Compare other graph neural network architectures 
 
 # References
 
