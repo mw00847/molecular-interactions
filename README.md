@@ -56,7 +56,13 @@ Psi4 produces acetone vibrations across 4 modes, initially these are subtracted 
 
 ![predictions from basic GNN](./predictions_from_basic_GNN.png)
 
+Bond Length Error (O–H) stabilized around 0.4 Å, with early fluctuation likely due to KL warm-up. Angle Error (H–O–H) dropped sharply from over 60° to under 10°, showing effective angle regularization. Training and Validation Losses both decreased steeply and plateaued, indicating learning without overfitting.
 
+![training and validation loss](./training_and_validation_loss.png)
+
+![angle error](./angle_error.png)
+
+![bond error](./bond_length_error.png)
 
 # References
 
