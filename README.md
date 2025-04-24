@@ -36,7 +36,7 @@ The peak centres of the mixtures is determined using Voigt peak fitting.
 6. A conditional Graph VAE was trained to generate new water geometries around the fixed acetone molecule.  Penalties where applied to the O-H bond length and H-O-H angles and Kullback-Leibler divergence was used with warm up scheduling.
 (VAE.py)
 
-7.Geometries are predicted using the VAE for each of the concentration ranges.
+7. Geometries are predicted using the VAE for each of the concentration ranges.
 (create_geometries.py)
 
 
