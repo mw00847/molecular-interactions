@@ -54,11 +54,11 @@ https://doi.org/10.1063/1.1790431
 https://doi.org/10.1366/000370210792434396
 
 # Results
-Psi4 produces acetone vibrations across 4 modes, initially these are subtracted from 10 varying concentrations of water and acetone and used as the target using a GNN. These results show variation of +/- 5cm-1 from the calculated difference.
+Psi4 was used to compute the vibrational frequencies of acetone, with the carbonyl peak distributed across four distinct modes. For each of these modes, the calculated values were compared to experimental FTIR data collected at ten different water–acetone concentrations. This yielded 40 frequency shift values (4 modes × 10 concentrations), which served as target outputs for a Graph Neural Network (GNN). The GNN predictions showed a deviation of no more than ±5 cm⁻¹ from the calculated frequency differences.
 
 ![predictions from basic GNN](./predictions_from_basic_GNN.png)
 
-The bond length error (O–H) stabilized around 0.4 Å, with early fluctuation likely due to KL warm-up. Angle error (H–O–H) dropped from over 60° to under 10°, showing the model learning the getting close to the correct water angle. Training and validation losses both decreased steeply and then plateaued, indicating learning without overfitting.
+Using the GNN with a variational auto encoder to predict new geometries. The bond length error (O–H) stabilized around 0.4 Å, with early fluctuation likely due to KL warm-up. Angle error (H–O–H) dropped from over 60° to under 10°, showing the model learning the getting close to the correct water angle. Training and validation losses both decreased steeply and then plateaued, indicating learning without overfitting.
 
 ![training and validation loss](./training_and_validation_loss.png)
 
