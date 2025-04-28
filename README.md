@@ -14,6 +14,7 @@ The aim of this project is to use FTIR spectroscopy, Quantum Mechanical (QM) cal
 In the case of the water acetone system, QM methods are used to sample different geometries of water at distances of between 2-4 angstroms from acetone. This provides features including frequency data, dipole moment, reduced mass, intensity, energy, geometry, coulomb matrices to be used with ML models.  With the inclusion of experimental FTIR data of the acetone mixtures as the target, the geometry of the acetone water complex can be reverse engineered using Graph Neural Networks.
 
 # Method
+
 The FTIR has been collected on a Nicolet iD7 with a resolution of 4cm-1. 
 acetone = 10.csv with increasing water -> 0.csv = water. 
 
@@ -40,9 +41,8 @@ The QM data has been created as below,
 6. A conditional Graph VAE was trained to generate new water geometries around the fixed acetone molecule.  Penalties where applied to the O-H bond length and H-O-H angles and Kullback-Leibler divergence was used with warm up scheduling.
 (VAE.py)
 
-7. Geometries are predicted using the VAE for each of the concentration ranges.
+7. Geometries are predicted using the VAE for each of the experimental FTIR concentration ranges.
 (create_geometries.py)
-
 
 # Background
 FTIR blue and red shifts, 
