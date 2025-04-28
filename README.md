@@ -3,7 +3,7 @@
 
 # Abstract 
 
-Non covalent interactions in mixtures vary with concentration and cause shifts in the vibrational modes of molecular functional groups, seen by IR spectroscopy. It can be suggested that with changing concentration and non covalent interactions, the geometry of a molecule complex changes in a similar way to well known reaction mechanisms such as nucleophilic and electrophilic substitution. The frequency shifts for simple acetone water mixtures vary up to 5cm-1 requiring high predictive accuracy and supporting the idea that the geometries follow a small change in trajectory. Variational auto encoder models can be used with Graph Neural networks that represent the molecular structure of complexes and can make predictions using QM features with the target being experimental IR peaks. Initial results show that the GNN model can predict within this range (residuals predictions). As the input QM geometries keep the covalent bond lengths and angles constant the GNN model includes loss functions for both these properties. Further work is required to include variations in the covalent bond lengths and angles to provide more valid vibrational frequencies.
+Non covalent interactions in mixtures vary with concentration and cause shifts in the vibrational modes of molecular functional groups, seen by IR spectroscopy. It can be suggested that with changing concentration and non covalent interactions, the geometry of a molecule complex changes in a similar way to well known reaction mechanisms such as nucleophilic and electrophilic substitution. The frequency shifts for simple acetone water mixtures vary up to 5cm-1 requiring high predictive accuracy and supporting the idea that the geometries follow a small change in trajectory. Variational auto encoder models can be used with Graph Neural networks to represent the molecular structure of complexes and can make predictions using QM features with the target being experimental IR peaks. Initial results show that the GNN model can predict within this range (residuals predictions). Further work is required to include variations in the training data, varying covalent bond lengths and angles to provide more valid vibrational frequencies.
 
 # Introduction
 
@@ -17,8 +17,10 @@ In the case of the water acetone system, QM methods are used to sample different
 The FTIR has been collected on a Nicolet iD7 with a resolution of 4cm-1. 
 acetone = 10.csv with increasing water -> 0.csv = water. 
 
-The peak centres of the mixtures is determined using Voigt peak fitting. 
+The carbonyl (~1700cm-1) peak of each concentration is determined using Voigt peak fitting. 
 (voigt_peak_centre.py) 
+
+The QM data has been created as below, 
 
 1. Optimise the xyz complexes of acetone and water
 
@@ -26,6 +28,8 @@ The peak centres of the mixtures is determined using Voigt peak fitting.
 
 3. Create ~1000 geometries of water around the acetone.
 (create_initial_geometries(G).ipynb)
+
+![water molecules 2-4 angstroms away from acetone C=O....H-O-H](./water_oxygens_around_acetone.png)
 
 4. Run QM using Psi4, calculating vibrational frequencies and other features.
 (run_QM.py)
