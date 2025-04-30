@@ -27,7 +27,7 @@ The QM data has been created as below,
 
 2. Center the oxygen on the acetone carbonyl to 0,0,0
 
-3. Create ~5000 geometries of water around the acetone.
+3. Create ~5000 geometries of water around the acetone. Setting parameters for the hydrogen bond lengths and water angles.
 (create_initial_geometries(G).ipynb)
 
 ![water angles in training data ](./angle_plot.png)
