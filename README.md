@@ -27,7 +27,7 @@ The QM data has been created as below,
 
 2. Center the oxygen on the acetone carbonyl to 0,0,0
 
-3. Create ~1000 geometries of water around the acetone.
+3. Create ~5000 geometries of water around the acetone.
 (create_initial_geometries(G).ipynb)
 
 ![water molecules 2-4 angstroms away from acetone C=O....H-O-H](./water_oxygens_around_acetone.png)
