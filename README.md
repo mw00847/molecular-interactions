@@ -30,7 +30,9 @@ The QM data has been created as below,
 3. Create ~5000 geometries of water around the acetone.
 (create_initial_geometries(G).ipynb)
 
-![water molecules 2-4 angstroms away from acetone C=O....H-O-H](./water_oxygens_around_acetone.png)
+![water angles in training data ](./angle_plot.png)
+
+![distance from acetone oxygen to each hydrogen in training data](./lengths_plot.png)
 
 4. Run QM using Psi4, calculating vibrational frequencies and other features.
 (run_QM.py)
