@@ -3,7 +3,9 @@
 
 # Abstract 
 
-The energy of a molecules vibrational mode differs with changing environments. The frequency of well known bands used to represent specific molecules then shift with varying concentration in a mixture, seen in FTIR spectroscopy. The frequency shifts for simple acetone water mixtures vary up to 5cm-1 requiring high predictive accuracy and supporting the idea that the geometries follow a small change in trajectory. Variational auto encoder models can be used with Graph Neural networks to represent the molecular structure of complexes and can make predictions using QM features with the target being experimental IR peaks. Initial results show that the GNN model can predict within this range (residuals predictions). Further work is required to include variations in the training data, varying covalent bond lengths and angles to provide more valid vibrational frequencies.
+The energy of a molecule’s vibrational modes changes with its chemical environment, leading to shifts in characteristic IR bands observed by FTIR spectroscopy. In mixtures, changes in concentration can strengthen or weaken non-covalent interactions, altering the geometry of molecular complexes and shifting IR absorption frequencies. These subtle structural variations can influence important properties such as solubility, reactivity, and binding affinity.
+
+This work aims to understand how the geometry of small-molecule complexes responds to concentration-dependent interactions. It combines quantum mechanical calculations with machine learning models—specifically Graph Neural Networks and Variational Autoencoders—to predict IR frequency shifts based on molecular geometry. Understanding these geometries is crucial for applications in biological systems, catalysis, and formulation science.
 
 # Introduction
 
