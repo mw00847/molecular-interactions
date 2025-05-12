@@ -17,19 +17,17 @@ In the case of the water acetone system, QM methods are used to sample different
 
 # Method
 
-The FTIR has been collected on a Nicolet iD7 with a resolution of 4cm-1. 
-acetone = 10.csv with increasing water -> 0.csv = water. 
+Mixtures of acetone and water were prepared across a range of volume ratios from 10:90 to 90:10 (acetone:water) and the FTIR spectrum was taken for each. The FTIR has been collected on a Nicolet iD7 with a resolution of 4cm-1. The carbonyl peak of each concentration is determined using Voigt peak fitting and the difference between the experimental peak and the QM calculated vibrations is the target for Machine Learning. 
 
-The carbonyl (~1700cm-1) peak of each concentration is determined using Voigt peak fitting. 
-(voigt_peak_centre.py) 
+acetone = 10.csv with increasing water -> 0.csv = water. (voigt_peak_centre.py) 
 
-The QM data has been created as below, 
+The QM training data has been created as below, 
 
-1. Optimise the xyz complexes of acetone and water
+1. Optimise the xyz complexe of acetone and water
 
 2. Center the oxygen on the acetone carbonyl to 0,0,0
 
-3. Create ~5000 geometries of water around the acetone. Setting parameters for the hydrogen bond lengths and water angles.
+3. Create ~1000 geometries of water around the acetone. Setting parameters for the hydrogen bond lengths and water angles.
 (create_initial_geometries(G).ipynb)
 
 ![water angles in training data ](./angle_plot.png)
@@ -143,7 +141,11 @@ https://proceedings.neurips.cc/paper/2020/hash/fb60d411a5c5c4c7bd16c6d0bd1780b9-
 GemNet: Universal Directional Graph Neural Networks for Molecules.
 https://arxiv.org/abs/2106.08903
 
+#To do 
 
+* include more QM training data
+* include SAPT energies
+* look at other useful complexes, monoethanolamine water for carbon dioxide capture.
 
 
 
