@@ -64,6 +64,8 @@ The FTIR plots of the carbonyl peak of the mixture show a shift of ±5cm-1.
 
 ![FTIR of carbonyl peak with increasing acetone, showing acetone carbonyl peak for reference](./carbonyl_peak_of_increasing_acetone_content.png)
 
+![Training data shows the position of hydrogen on the energy landscape](./energy_landscape_H)
+
 ![training and validation loss](./training_and_validation_loss.png)
 
 ![angle error](./angle_error.png)
