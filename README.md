@@ -19,7 +19,7 @@ In the case of the water acetone system, QM methods are used to sample different
 
 Mixtures of acetone and water were prepared across a range of volume ratios from 10:90 to 90:10 (acetone:water) and the FTIR spectrum was taken for each. The FTIR has been collected on a Nicolet iD7 with a resolution of 4cm-1. The carbonyl peak of each concentration is determined using Voigt peak fitting and the difference between the experimental peak and the QM calculated vibrations is the target for Machine Learning. 
 
-acetone = 10.csv with increasing water -> 0.csv = water. (voigt_peak_centre.py) 
+(voigt_peak_centre.py) 
 
 The QM training data has been created as below, 
 
@@ -60,11 +60,9 @@ https://doi.org/10.1063/1.1790431
 https://doi.org/10.1366/000370210792434396
 
 # Results
-Psi4 was used to compute the vibrational frequencies of acetone, with the carbonyl peak distributed across four distinct modes. For each of these modes, the calculated values were compared to experimental FTIR data collected at ten different water–acetone concentrations. This yielded 40 frequency shift values (4 modes × 10 concentrations), which served as target outputs for a Graph Neural Network (GNN). The GNN predictions showed a deviation of no more than ±5 cm⁻¹ from the calculated frequency differences.
+The FTIR plots of the carbonyl peak of the mixture show a shift of ±5cm-1. 
 
-![predictions from basic GNN](./predictions_from_basic_GNN.png)
-
-Using the GNN with a variational auto encoder to predict new geometries. The bond length error (O–H) stabilized around 0.4 Å, with early fluctuation likely due to KL warm-up. Angle error (H–O–H) dropped from over 60° to under 10°, showing the model learning the getting close to the correct water angle. Training and validation losses both decreased steeply and then plateaued, indicating learning without overfitting.
+![FTIR of carbonyl peak with increasing acetone, showing acetone carbonyl peak for reference](./carbonyl_peak_of_increasing_acetone_content.png)
 
 ![training and validation loss](./training_and_validation_loss.png)
 
