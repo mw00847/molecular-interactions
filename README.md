@@ -95,17 +95,17 @@ The prediction of the O-H bond length was better than for the angles, with error
 
 # Further work 
 
-*The bond angle loss weighting should be increased to improve the accuracy of this property. 
+* The bond angle loss weighting should be increased to improve the accuracy of this property. 
 
-*Look at using alternative constraints in the decoder. 
+* Look at using alternative constraints in the decoder. 
 
-*Remove poor geometries from the initial QM dataset  
+* Remove poor geometries from the initial QM dataset  
 
-*Include water acetone complexes with varied covalent bond lengths.
+* Include water acetone complexes with varied covalent bond lengths.
 
-*Run QM on predicted geometries and loop this back into the model. 
+* Run QM on predicted geometries and loop this back into the model. 
 
-*Compare other graph neural network architectures
+* Compare other graph neural network architectures
 
 * include more QM training data
 
