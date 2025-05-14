@@ -60,43 +60,59 @@ https://doi.org/10.1063/1.1790431
 https://doi.org/10.1366/000370210792434396
 
 # Results
-The FTIR plots of the carbonyl peak of the mixture show a shift of ±5cm-1. 
+The FTIR plots of the carbonyl peak of the mixtures show a shift of ±5cm-1 with increasing acetone content in Results 1. 
 
 ![FTIR of carbonyl peak with increasing acetone, showing acetone carbonyl peak for reference](./carbonyl_peak_of_increasing_acetone_content.png)
+Results 1. FTIR of carbonyl peak with increasing acetone, showing acetone carbonyl peak for reference
+
+The training features were produced with QM using acetone and water at different geometries. Results 2 shows how the position of a hydrogen atom in the water molecule varies across the energy landscape of the training dataset.
 
 ![Training data shows the position of hydrogen on the energy landscape](./energy_training_data.png)
+Results 2. Training data shows the position of hydrogen on the energy landscape
+
+The GraphVAE model was validated on its ability to reconstruct water acetone geometries. The focus was on maintaining realistic O–H bond lengths (~0.96 Å) and H–O–H bond angle (~104.5°) across different concentration conditions.
 
 ![training and validation loss](./training_and_validation_loss.png)
+Results 3. training and validation loss
 
 ![angle error](./angle_error.png)
+Results 4. angle error
 
 ![bond error](./bond_length_error.png)
+Results 5. bond error
 
-The trained Conditional GraphVAE model was evaluated for its ability to reconstruct geometries. The focus was on maintaining realistic O–H bond lengths (~0.96 Å) and the H–O–H bond angle (~104.5°) across different concentration conditions.
-
-O–H Bond Lengths
-The predicted bond lengths for O–H₁ and O–H₂ remain close to the target value in most concentration settings, but certain indices show elevated bond lengths (~2.0 Å), indicating occasional model instability. A dashed line at 0.96 Å provides a reference for the ideal value. These deviations suggest a need to strengthen the bond loss term or explore outlier geometries in training.
-
-H–O–H Bond Angle 
-The model is less accurate with angle prediction. While the target angle is ~104.5°, fluctuations are seen across concentration indices, with angles as low as ~35° and as high as ~195°. 
+The VAE was trained with alternating KL scheduling as seen in VAE2.py leading to the angle and bond error loss seen in Results 4 and 5. The bond error stabilised to around 0.5 angstroms while the angle error was larger, out by up to 15 degrees.
 
 ![predict OH bond angle](./predict_OH_bond_angle.png)
+Results 6. predicting the H–O–H bond angle
 
 ![predict OH bond length](./predict_OH_bond_length.png)
+Results 7. predicting the OH bond length
+
+The VAE predicted geometries of up to 100 degrees away from the standard H-O-H bond angle suggesting further work is required to improve the model. Some concentration indexes showed smaller deviance, Results 6.
+
+The prediction of the O-H bond length was better than for the angles, with errors up to 1 angstrom away from the expected bond length.
 
 # Further work 
 
-The bond angle loss weighting should be increased to improve the accuracy of this property. 
+*The bond angle loss weighting should be increased to improve the accuracy of this property. 
 
-Look at using alternative constraints in the decoder. 
+*Look at using alternative constraints in the decoder. 
 
-Remove poor geometries 
+*Remove poor geometries from the initial QM dataset  
 
-Include water acetone complexes with varied covalent bond lengths.
+*Include water acetone complexes with varied covalent bond lengths.
 
-Run QM on predicted geometries and loop this back into the model. 
+*Run QM on predicted geometries and loop this back into the model. 
 
-Compare other graph neural network architectures 
+*Compare other graph neural network architectures
+
+* include more QM training data
+
+* include SAPT energies
+
+* look at other useful complexes, monoethanolamine water for carbon dioxide capture.
+
 
 # References
 
@@ -140,12 +156,8 @@ https://proceedings.neurips.cc/paper/2020/hash/fb60d411a5c5c4c7bd16c6d0bd1780b9-
 
 GemNet: Universal Directional Graph Neural Networks for Molecules.
 https://arxiv.org/abs/2106.08903
+ 
 
-#To do 
-
-* include more QM training data
-* include SAPT energies
-* look at other useful complexes, monoethanolamine water for carbon dioxide capture.
 
 
 
