@@ -17,9 +17,9 @@ In the case of the water acetone system, QM methods are used to sample different
 
 # Method
 
-Mixtures of acetone and water were prepared across a range of volume ratios from 10:90 to 90:10 (acetone:water) and the FTIR spectrum was taken for each. The FTIR has been collected on a Nicolet iD7 with a resolution of 4cm-1. The carbonyl peak of each concentration is determined using Voigt peak fitting and the difference between the experimental peak and the QM calculated vibrations is the target for Machine Learning. 
+Mixtures of acetone and water were prepared across a range of volume ratios from 10:90 to 90:10 (acetone:water) and the FTIR spectrum was taken for each. The FTIR has been collected on a Nicolet iD7 with a resolution of 4cm-1. 
 
-(voigt_peak_centre.py) 
+The carbonyl peak of each concentration is determined using Voigt peak fitting and the difference between the experimental peak and the QM calculated vibrations is the target for Machine Learning. (voigt_peak_centre.py) 
 
 The QM training data has been created as below, 
 
