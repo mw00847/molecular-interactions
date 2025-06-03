@@ -32,7 +32,7 @@ The QM training data has been created as below,
 
 ![water angles in training data ](./angle_plot.png)
 
-![distance from acetone oxygen to each hydrogen in training data](./lengths_plot.png)
+![distance from acetone oxygen to each hydrogen in training data](./distance_o1_to_water.png)
 
 4. Run QM using Psi4, calculating vibrational frequencies and other features.
 (run_QM.py)
