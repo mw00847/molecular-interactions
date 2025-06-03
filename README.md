@@ -27,23 +27,23 @@ The QM training data has been created as below,
 
 2. Center the oxygen on the acetone carbonyl to 0,0,0
 
-3. Create ~1000 geometries of water around the acetone. Setting parameters for the hydrogen bond lengths and water angles.
+3. Create geometries of water around the acetone. Setting parameters for the hydrogen bond lengths and water angles.
 (create_initial_geometries(G).ipynb)
 
 ![water angles in training data ](./angle_plot.png)
 
 ![distance from acetone oxygen to each hydrogen in training data](./distance_o1_to_water.png)
 
-4. Run QM using Psi4, calculating vibrational frequencies and other features.
+4. Run QM using Psi4, calculating vibrational frequencies and other features. For the QM training data 1000 geometries have been used.
 (run_QM.py)
 
 5. Filter the geometries that produce useful carbonyl related vibrations and create a graph for use in ML.
 (create_graph.py)
 
-6. A conditional Graph VAE was trained to generate new water geometries around the fixed acetone molecule.  Penalties where applied to the O-H bond length and H-O-H angles and Kullback-Leibler divergence was used with warm up scheduling.
+6.6. A conditional Graph VAE was trained to generate new water geometries around the fixed acetone molecule. The model incorporated both Graph Convolutional Networks (GCNs) and Graph Attention Networks (GATs) in the encoder and decoder. Penalties were applied to the O–H bond lengths and H–O–H angles, and Kullback–Leibler divergence was used with warm-up scheduling.
 (VAE.py)
 
-7. Geometries are predicted using the VAE for each of the experimental FTIR concentration ranges.
+7. Geometries are predicted using the VAE for each of the concentration ranges.
 (create_geometries.py)
 
 # Background
