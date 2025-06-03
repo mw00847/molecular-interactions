@@ -40,8 +40,7 @@ The QM training data has been created as below,
 5. Filter the geometries that produce useful carbonyl related vibrations and create a graph for use in ML.
 (create_graph.py)
 
-6.6. A conditional Graph VAE was trained to generate new water geometries around the fixed acetone molecule. The model incorporated both Graph Convolutional Networks (GCNs) and Graph Attention Networks (GATs) in the encoder and decoder. Penalties were applied to the O–H bond lengths and H–O–H angles, and Kullback–Leibler divergence was used with warm-up scheduling.
-(VAE.py)
+6. A conditional Graph VAE was trained to generate new water geometries around the fixed acetone molecule. The model incorporated both Graph Convolutional Networks (GCNs) and Graph Attention Networks (GATs) in the encoder and decoder. Penalties were applied to the O–H bond lengths and H–O–H angles, and Kullback–Leibler divergence was used with warm-up scheduling.(VAE.py)
 
 7. Geometries are predicted using the VAE for each of the concentration ranges.
 (create_geometries.py)
