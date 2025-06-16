@@ -69,7 +69,9 @@ The training features were produced with QM using acetone and water at different
 ![Training data shows the position of hydrogen on the energy landscape](./energy_training_data.png)
 Results 2. Training data shows the position of hydrogen on the energy landscape
 
+![image](https://github.com/user-attachments/assets/914d3a95-ef25-409c-927b-5d7adfa5d58c)
 
+![image](https://github.com/user-attachments/assets/2ca9b198-b3e7-4ca0-92c1-bb2475a059a6)
 
 # Further work 
 
