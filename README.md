@@ -69,28 +69,7 @@ The training features were produced with QM using acetone and water at different
 ![Training data shows the position of hydrogen on the energy landscape](./energy_training_data.png)
 Results 2. Training data shows the position of hydrogen on the energy landscape
 
-The GraphVAE model was validated on its ability to reconstruct water acetone geometries. The focus was on maintaining realistic O–H bond lengths (~0.96 Å) and H–O–H bond angle (~104.5°) across different concentration conditions.
 
-![training and validation loss](./training_and_validation_loss.png)
-Results 3. training and validation loss
-
-![angle error](./angle_error.png)
-Results 4. angle error
-
-![bond error](./bond_length_error.png)
-Results 5. bond error
-
-The VAE was trained with alternating KL scheduling as seen in VAE2.py leading to the angle and bond error loss seen in Results 4 and 5. The bond error stabilised to around 0.5 angstroms while the angle error was larger, out by up to 15 degrees.
-
-![predict OH bond angle](./predict_OH_bond_angle.png)
-Results 6. predicting the H–O–H bond angle
-
-![predict OH bond length](./predict_OH_bond_length.png)
-Results 7. predicting the OH bond length
-
-The VAE predicted geometries of up to 100 degrees away from the standard H-O-H bond angle suggesting further work is required to improve the model. Some concentration indexes showed smaller deviance, Results 6.
-
-The prediction of the O-H bond length was better than for the angles, with errors up to 1 angstrom away from the expected bond length.
 
 # Further work 
 
