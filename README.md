@@ -84,6 +84,13 @@ These results suggest that attention-based models like GAT and Transformer offer
 ![image](https://github.com/user-attachments/assets/2ca9b198-b3e7-4ca0-92c1-bb2475a059a6)
 Results 3. Comparison of losses for different architectures 
 
+![predicted geometries](./water_geometry_vs_concentration.md)
+Results 4. Predicted geometries from the transformer VAE 
+
+![image](https://github.com/user-attachments/assets/635686a7-8701-4b57-8a05-eefa9240118a)
+Results 5. Quadratic fit of the frequency shift vs the angle between O1 on acetone and H7 on the water 
+
+
 # Further work 
 
 * The predicted geometries from the VAE put the hydrogens from the water at ~3.6Å, this means that running psi4 calculations on these molecules does not give peaks back at around 1700cm-1. is this due to the spread of the training data? Will reducing training geometries with hydrogen bond lengths over 3Å improve the prediction. The same can be said about the internal angles predicted for the water at ~105°.
