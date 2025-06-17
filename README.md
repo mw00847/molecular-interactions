@@ -75,24 +75,9 @@ Results 2. Training data shows the position of hydrogen on the energy landscape
 
 # Further work 
 
-* The predicted geometries from the VAE put the hydrogens from the water at ~3.6Å, this means that running psi4 calculations on these molecules does not give peaks back at around 1700cm-1. is this due to the spread of the training data? Will reducing training geometries with hydrogen bond lengths over 3Å improve the prediction.   
+* The predicted geometries from the VAE put the hydrogens from the water at ~3.6Å, this means that running psi4 calculations on these molecules does not give peaks back at around 1700cm-1. is this due to the spread of the training data? Will reducing training geometries with hydrogen bond lengths over 3Å improve the prediction.
 
-* Look at using alternative constraints in the decoder. 
-
-* Remove poor geometries from the initial QM dataset  
-
-* Include water acetone complexes with varied covalent bond lengths.
-
-* Run QM on predicted geometries and loop this back into the model. 
-
-* Compare other graph neural network architectures
-
-* include more QM training data
-
-* include SAPT energies
-
-* look at other useful complexes, monoethanolamine water for carbon dioxide capture.
-
+The same can be said about the internal angles predicted for the water at ~105°.
 
 # References
 
