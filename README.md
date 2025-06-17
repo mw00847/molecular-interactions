@@ -86,9 +86,7 @@ Results 3. Comparison of losses for different architectures
 
 # Further work 
 
-* The predicted geometries from the VAE put the hydrogens from the water at ~3.6Å, this means that running psi4 calculations on these molecules does not give peaks back at around 1700cm-1. is this due to the spread of the training data? Will reducing training geometries with hydrogen bond lengths over 3Å improve the prediction.
-
-The same can be said about the internal angles predicted for the water at ~105°.
+* The predicted geometries from the VAE put the hydrogens from the water at ~3.6Å, this means that running psi4 calculations on these molecules does not give peaks back at around 1700cm-1. is this due to the spread of the training data? Will reducing training geometries with hydrogen bond lengths over 3Å improve the prediction. The same can be said about the internal angles predicted for the water at ~105°.
 
 # References
 
