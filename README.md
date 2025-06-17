@@ -69,7 +69,7 @@ The training features were produced with QM using acetone and water at different
 ![Training data shows the position of hydrogen on the energy landscape](./energy_training_data.png)
 Results 2. Training data shows the position of hydrogen on the energy landscape
 
-To evaluate geometric accuracy, three different Graph Neural Network (GNN) architectures—GCN, GAT, and Transformer—were compared based on their ability to predict bond lengths and bond angles in molecular structures.
+To evaluate geometric accuracy, three different Graph Neural Network (GNN) architectures—GCN, GAT, and Transformer—were compared based on their ability to predict bond lengths and bond angles in molecular structures. Model performance was optimized using Optuna with Bayesian search, tuning key hyperparameters including bond loss, angle loss, maximum kl divergence and number of training epochs.
 
 Bond Error (Å):
 Mean absolute bond length errors show that all models perform reasonably, but the GAT and Transformer models have fewer extreme outliers and lower median error than GCN.
