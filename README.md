@@ -102,6 +102,8 @@ A hydrogen bond loss of 2Å forced the predicted geometries to have a distance o
 
 Either a potential energy function is fitted to one geometry and used as a loss function in the learning. Or another neural network is built to learn the energy term and use this as a loss function in the original VAE.
 
+* The length of the carbonyl bond needs to be varied in the training data as this will contribute to the shift at 1700cm-1.
+
 # References
 
 https://cs229.stanford.edu/proj2017/final-reports/5244394.pdf
