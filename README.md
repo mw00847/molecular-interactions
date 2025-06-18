@@ -96,7 +96,11 @@ Results 5. Quadratic fit of the frequency shift vs the angle between O1 on aceto
 
 # Further work 
 
-* The predicted geometries from the VAE put the hydrogens from the water at ~3.6Å, this means that running psi4 calculations on these molecules does not give peaks back at around 1700cm-1. is this due to the spread of the training data? Will reducing training geometries with hydrogen bond lengths over 3Å improve the prediction. The same can be said about the internal angles predicted for the water at ~105°.
+* The predicted geometries from the VAE put the hydrogens on the water at a distance of ~3.6Å, this means that running psi4 calculations on these molecules does not give peaks back at around 1700cm-1. is this due to the spread of the training data? Will reducing training geometries with hydrogen bond lengths over 3Å improve the prediction. The same can be said about the internal angles predicted for the water at ~105°.
+
+A hydrogen bond loss of 2Å forced the predicted geometries to have a distance of ~1.9Å from carbonyl oxygen to the hydrogen on water but this seems to constrain the system too much so the distance must be learnt in a better way. 
+
+Either a potential energy function is fitted to one geometry and used as a loss function in the learning. Or another neural network is built to learn the energy term and use this as a loss function in the original VAE.
 
 # References
 
