@@ -3,9 +3,9 @@
 
 # Abstract 
 
-The energy of a molecule’s vibrational modes changes with its chemical environment, leading to shifts in characteristic IR bands observed by FTIR spectroscopy. In mixtures, changes in concentration can strengthen or weaken non-covalent interactions, altering the geometry of molecular complexes and shifting IR absorption frequencies. These subtle structural variations can influence important properties such as solubility, reactivity, and binding affinity.
+The energy of a molecule’s vibrational modes changes with its chemical environment, causing shifts in characteristic bands observed by FTIR spectroscopy. For mixtures, changes in concentration can strengthen or weaken non-covalent interactions, altering the geometry of molecular complexes and shifting absorption frequencies. These subtle structural variations can influence important properties such as solubility, reactivity, and binding affinity.
 
-This work aims to understand how the geometry of small-molecule complexes responds to concentration-dependent interactions. It combines quantum mechanical calculations with machine learning models—specifically Graph Neural Networks and Variational Autoencoders—to predict IR frequency shifts based on molecular geometry. Understanding these geometries is crucial for applications in biological systems, catalysis, and formulation science.
+This work aims to understand how the geometry of small-molecule complexes, particulalry acetone and water respond to concentration-dependent interactions. It combines quantum mechanical calculations with machine learning models—specifically Graph Neural Networks and Variational Autoencoders—to predict IR frequency shifts based on molecular geometry. Understanding changes in geometries is useful for applications in biological systems, catalysis, and formulation science.
 
 # Introduction
 
@@ -17,9 +17,9 @@ In the case of the water acetone system, QM methods are used to sample different
 
 # Method
 
-Mixtures of acetone and water were prepared across a range of volume ratios from 10:90 to 90:10 (acetone:water) and the FTIR spectrum was taken for each. The FTIR has been collected on a Nicolet iD7 with a resolution of 4cm-1. 
+Mixtures of acetone and water were prepared across a range of volume ratios from 10:90 to 90:10 (acetone:water) and the FTIR spectrum was taken for each. The FTIR has been collected on a Nicolet iD7 with a resolution of 2cm-1. 
 
-The carbonyl peak of each concentration is determined using Voigt peak fitting and the difference between the experimental peak and the QM calculated vibrations is the target for Machine Learning. (voigt_peak_centre.py) 
+The carbonyl peak of each concentration is determined using Voigt peak fitting and the difference between the experimental peak and the QM calculated vibrations are used as the target for Machine Learning. (voigt_peak_centre.py) 
 
 The QM training data has been created as below, 
 
@@ -42,7 +42,9 @@ The QM training data has been created as below,
 
 6. A conditional Graph VAE was trained to generate new water geometries around the fixed acetone molecule. The model incorporated both Graph Convolutional Networks (GCNs) and Graph Attention Networks (GATs) in the encoder and decoder. Penalties were applied to the O–H bond lengths and H–O–H angles, and Kullback–Leibler divergence was used with warm-up scheduling.(VAE.py)
 
-7. Geometries are predicted using the VAE for each of the concentration ranges.
+7. Optuna was used Optuna with Bayesian optimisation to tune loss weights and training epochs, minimising the validation loss.
+
+8. Geometries are predicted using the VAE for each of the concentration ranges.
 (create_geometries.py)
 
 # Background
@@ -69,7 +71,7 @@ The training features were produced with QM using acetone and water at different
 ![Training data shows the position of hydrogen on the energy landscape](./energy_training_data.png)
 Results 2. Training data shows the position of hydrogen on the energy landscape
 
-To evaluate geometric accuracy, three different Graph Neural Network (GNN) architectures—GCN, GAT, and Transformer—were compared based on their ability to predict bond lengths and bond angles in molecular structures. Model performance was optimized using Optuna with Bayesian search, tuning key hyperparameters including bond loss, angle loss, maximum kl divergence and number of training epochs.
+Three different Graph Neural Network (GNN) architectures—GCN, GAT, and Transformer were compared based on their ability to predict bond lengths and bond angles in molecular structures. Model performance was optimised using Optuna with Bayesian search, tuning key hyperparameters including bond loss, angle loss, maximum kl divergence and number of training epochs.
 
 Bond Error (Å):
 Mean absolute bond length errors show that all models perform reasonably, but the GAT and Transformer models have fewer extreme outliers and lower median error than GCN.
@@ -77,7 +79,7 @@ Mean absolute bond length errors show that all models perform reasonably, but th
 Angle Error (°):
 Angle predictions are notably more accurate with Transformer, which shows the lowest mean and variance. GCN, by contrast, exhibits high variability and larger errors.
 
-These results suggest that attention-based models like GAT and Transformer offer improved geometric fidelity in molecular structure prediction tasks.
+These results suggest that attention-based models including GAT and Transformer offer improved geometric fidelity in molecular structure prediction tasks.
 
 ![image](https://github.com/user-attachments/assets/914d3a95-ef25-409c-927b-5d7adfa5d58c)
 
@@ -85,9 +87,13 @@ These results suggest that attention-based models like GAT and Transformer offer
 
 Results 3. Comparison of losses for different architectures 
 
+Results 4. show the predicted internal angles of water with increasing concentration around the static acetone molecule. The distance between the oxygen on the acetone carbonyl and the hydrogens on the water give distances above the standard hydrogen bond distance.
+
 ![predicted geometries](./predicted_geometries.PNG)
 
 Results 4. Predicted geometry properties from the transformer VAE 
+
+Based upon the angle change and frequency shift a quadratic function is proposed.
 
 ![image](https://github.com/user-attachments/assets/635686a7-8701-4b57-8a05-eefa9240118a)
 
