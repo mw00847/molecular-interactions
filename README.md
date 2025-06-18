@@ -87,9 +87,10 @@ Results 3. Comparison of losses for different architectures
 
 ![predicted geometries](./predicted_geometries.PNG)
 
-Results 4. Predicted geometries from the transformer VAE 
+Results 4. Predicted geometry properties from the transformer VAE 
 
 ![image](https://github.com/user-attachments/assets/635686a7-8701-4b57-8a05-eefa9240118a)
+
 Results 5. Quadratic fit of the frequency shift vs the angle between O1 on acetone and H7 on the water 
 
 
