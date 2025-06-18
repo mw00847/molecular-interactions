@@ -85,7 +85,7 @@ These results suggest that attention-based models like GAT and Transformer offer
 
 Results 3. Comparison of losses for different architectures 
 
-![predicted geometries](./predicted_geometries.png)
+![predicted geometries](./predicted_geometries.PNG)
 
 Results 4. Predicted geometries from the transformer VAE 
 
