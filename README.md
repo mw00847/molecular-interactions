@@ -7,6 +7,8 @@ The energy of a molecule’s vibrational modes changes with its chemical environ
 
 This work aims to understand how the geometry of small-molecule complexes, particulalry acetone and water respond to concentration-dependent interactions. It combines quantum mechanical calculations with machine learning models—specifically Graph Neural Networks and Variational Autoencoders—to predict IR frequency shifts based on molecular geometry. Understanding changes in geometries is useful for applications in biological systems, catalysis, and formulation science.
 
+![3D Rotation](assets/ezgif.com-optimize.gif)
+
 # Introduction
 
 Chemical bonds in molecules vibrate at different frequencies depending upon their chemical environment. With increasing concentrations of substances in a mixture the non covalent interactions of a molecule change as the molecule interacts with other species, altering the geometry and the vibrations of the molecule. The most simple example of this can be in a mixture of water, where adding acetone disrupts the hydrogen bonding of water and causes the carbonyl of acetone to vibrate at slightly different frequencies than it would on its own.
