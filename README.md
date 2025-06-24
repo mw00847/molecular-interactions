@@ -7,7 +7,7 @@ The energy of a molecule’s vibrational modes changes with its chemical environ
 
 This work aims to understand how the geometry of small-molecule complexes, particulalry acetone and water respond to concentration-dependent interactions. It combines quantum mechanical calculations with machine learning models—specifically Graph Neural Networks and Variational Autoencoders—to predict IR frequency shifts based on molecular geometry. Understanding changes in geometries is useful for applications in biological systems, catalysis, and formulation science.
 
-![3D Rotation](assets/ezgif.com-optimize.gif)
+![3D Rotation](./ezgif.com-optimize.gif)
 
 # Introduction
 
