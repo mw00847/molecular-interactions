@@ -118,6 +118,8 @@ Either a potential energy function is fitted to one geometry and used as a loss 
 
 * The length of the carbonyl bond needs to be varied in the training data to provide better understanding.
 
+* The broad nature of the carbonyl peak with additions of water show diversity in the geometries of the water acetone system. Other sharper peaks may provide better insight into geometry changes.
+
 # References
 
 https://cs229.stanford.edu/proj2017/final-reports/5244394.pdf
