@@ -69,7 +69,7 @@ https://doi.org/10.1063/1.1790431
 https://doi.org/10.1366/000370210792434396
 
 # Results
-The FTIR plots of the carbonyl peak of the mixtures show a shift of ±5cm-1 with increasing acetone content in Results 1. 
+The FTIR plots of the carbonyl peak of the mixtures show a shift of ±5cm-1 with increasing acetone content in Results 1. From right to left with increasing water concentration there are more possible water acetone conformations possible leading to broadening of the peaks.
 
 ![FTIR of carbonyl peak with increasing acetone, showing acetone carbonyl peak for reference](./carbonyl_peak_of_increasing_acetone_content.png)
 Results 1. FTIR of carbonyl peak with increasing acetone, showing acetone carbonyl peak for reference
