@@ -35,7 +35,7 @@ Mixtures of acetone and water were prepared across a range of volume ratios from
 
 The carbonyl peak of each concentration is determined using Voigt peak fitting and the difference between the experimental peak and the QM calculated vibrations are used as the target for Machine Learning. (voigt_peak_centre.py) 
 
-The QM data is made up of 1000 conformations of water surrounding a static acetone molecule (create_initial_geometries(G).ipynb)
+The QM training set is made up of 1000 conformations of water surrounding a static acetone molecule (create_initial_geometries(G).ipynb)
 
 <p align="center">
   <img src="./angle_plot.png" alt="Water angles in training data" width="400"/>
@@ -47,7 +47,7 @@ The QM data is made up of 1000 conformations of water surrounding a static aceto
 </p>
 
 
-Psi4 was used to run the QM training data (run_QM.py)
+Quantum mechanical calculations were performed using Psi4 at the MP2 level of theory with the cc-pVDZ basis set. Each geometry underwent vibrational frequency analysis (without reoptimization), and the resulting dipole moments, total energies, IR intensities, frequencies, and reduced masses were extracted as features for training (see run_QM.py).
 
 The features extracted included 
 * dipoles
