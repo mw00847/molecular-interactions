@@ -60,9 +60,9 @@ correlated features
 * frequencies
 
 included in graph edge features
-*hydrogen-carbonyl distances and angles
+* hydrogen-carbonyl distances and angles
 
-Both supervised and unsupervised feature analysis were used to understand the structure and importance of the feature dataset using Principal Component Analysis (PCA) and XGBoost (feature_analysis.py)
+Both supervised and unsupervised analysis methods where used to understand the structure and importance of the feature dataset using Principal Component Analysis (PCA) and XGBoost (feature_analysis.py)
 
 The geometries that produce useful carbonyl related vibrations where then filtered and graphs where created using PyTorch Geometric.
 (create_graph.py)
