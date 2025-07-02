@@ -19,7 +19,6 @@ This work aims to understand how the geometry of small-molecule complexes, parti
 </p>
 
 <p align="center">
-  Comparison of 3D rotation and line animation.
 </p>
 
 # Introduction
