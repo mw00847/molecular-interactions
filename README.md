@@ -50,8 +50,8 @@ The QM training set is made up of 1000 conformations of water surrounding a stat
 Quantum mechanical calculations were performed using Psi4 at the MP2 level of theory with the cc-pVDZ basis set. Each geometry underwent vibrational frequency analysis (without reoptimization), and the resulting dipole moments, total energies, IR intensities, frequencies, and reduced masses were extracted as features for training (see run_QM.py).
 
 The features extracted included 
-* dipoles
-* energies
+* dipole
+* energy
 * coulomb matrix (coulomb_matrix_function.py)
 
 correlated features
