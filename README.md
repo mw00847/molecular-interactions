@@ -67,12 +67,9 @@ Both supervised and unsupervised analysis methods where used to understand the s
 The geometries that produce useful carbonyl related vibrations where then filtered and graphs where created using PyTorch Geometric.
 (create_graph.py)
 
-6. A conditional Graph VAE was trained to generate new water geometries around the fixed acetone molecule. The model incorporated both Graph Convolutional Networks (GCNs) and Graph Attention Networks (GATs) in the encoder and decoder. Penalties were applied to the O–H bond lengths and H–O–H angles, and Kullback–Leibler divergence was used with warm-up scheduling.(VAE.py)
+A conditional Graph VAE was trained to generate new water geometries around the fixed acetone molecule. The model incorporated both Graph Convolutional Networks (GCNs) and Graph Attention Networks (GATs) in the encoder and decoder. Penalties were applied to the O–H bond lengths and H–O–H angles, and Kullback–Leibler divergence was used with warm-up scheduling.(VAE.py) Optuna was used with Bayesian optimisation to tune loss weights and training epochs, minimising the validation loss.
 
-7. Optuna was used Optuna with Bayesian optimisation to tune loss weights and training epochs, minimising the validation loss.
-
-8. Geometries are predicted using the VAE for each of the concentration ranges.
-(create_geometries.py)
+Geometries are predicted using the VAE for each of the concentration ranges.(create_geometries.py)
 
 # Background
 FTIR blue and red shifts, 
