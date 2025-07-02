@@ -105,10 +105,10 @@ Angle predictions are notably more accurate with Transformer, which shows the lo
 
 These results suggest that attention-based models including GAT and Transformer offer improved geometric fidelity in molecular structure prediction tasks.
 
-![image](https://github.com/user-attachments/assets/914d3a95-ef25-409c-927b-5d7adfa5d58c)
-
-![image](https://github.com/user-attachments/assets/2ca9b198-b3e7-4ca0-92c1-bb2475a059a6)
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/914d3a95-ef25-409c-927b-5d7adfa5d58c" alt="Image 1" width="400"/>
+  <img src="https://github.com/user-attachments/assets/2ca9b198-b3e7-4ca0-92c1-bb2475a059a6" alt="Image 2" width="400"/>
+</p>
 Results 3. Comparison of losses for different architectures 
 
 Results 4. show the predicted internal angles of water with increasing concentration around the static acetone molecule. The distance between the oxygen on the acetone carbonyl and the hydrogens on the water give distances above the standard hydrogen bond distance.
