@@ -111,6 +111,7 @@ These results suggest that attention-based models including GAT and Transformer 
 </p>
 Results 3. Comparison of losses for different architectures 
 
+
 Results 4. show the predicted internal angles of water with increasing concentration around the static acetone molecule. The distance between the oxygen on the acetone carbonyl and the hydrogens on the water give distances above the standard hydrogen bond distance.
 
 ![predicted geometries](./predicted_geometries.PNG)
