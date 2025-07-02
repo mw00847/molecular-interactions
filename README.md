@@ -38,9 +38,8 @@ The QM training data has been created as below,
 3. Create geometries of water around the acetone. Setting parameters for the hydrogen bond lengths and water angles.
 (create_initial_geometries(G).ipynb)
 
-![water angles in training data ](./angle_plot.png)
-
-![distance from acetone oxygen to each hydrogen in training data](./distance_o1_to_water.png)
+![water angles in training data ](./angle_plot.png) ![distance from acetone oxygen to each hydrogen in training data](./distance_o1_to_water.png)
+comparison of angle and distance dimensions created in the training data.
 
 4. Run QM using Psi4, calculating vibrational frequencies and other features. For the QM training data 1000 geometries have been used.
 (run_QM.py)
