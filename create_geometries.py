@@ -1,3 +1,12 @@
+"""
+This script loads a trained Conditional Graph VAE model and reconstructs water geometries 
+around a fixed acetone template at the experimental concentrations. For each condition, 
+it encodes a test graph, decodes the predicted water atom positions, and combines them 
+with the fixed acetone geometry. It then calculates O–H bond lengths and the H–O–H angle 
+for the generated geometries, and plots these values as a function of concentration.
+"""
+
+
 from define_model import ConditionalGraphVAE
 import torch
 from torch_geometric.loader import DataLoader
