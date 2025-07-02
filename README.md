@@ -47,8 +47,7 @@ The QM data is made up of 1000 conformations of water surrounding a static aceto
 </p>
 
 
-4. Run QM using Psi4, calculating vibrational frequencies and other features. For the QM training data 1000 geometries have been used.
-(run_QM.py)
+Psi4 was used to run the QM training data (run_QM.py)
 
 The features extracted included 
 * dipoles
