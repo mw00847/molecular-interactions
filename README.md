@@ -95,6 +95,10 @@ The training features were produced with QM using acetone and water at different
 ![Training data shows the position of hydrogen on the energy landscape](./energy_training_data.png)
 Results 2. Training data shows the position of hydrogen on the energy landscape
 
+
+![PCA](./PCA_coloured.png)
+Results 3. PCA coloured by feature
+
 Three different Graph Neural Network (GNN) architectures—GCN, GAT, and Transformer were compared based on their ability to predict bond lengths and bond angles in molecular structures. Model performance was optimised using Optuna with Bayesian search, tuning key hyperparameters including bond loss, angle loss, maximum kl divergence and number of training epochs.
 
 Bond Error (Å):
@@ -109,10 +113,10 @@ These results suggest that attention-based models including GAT and Transformer 
   <img src="https://github.com/user-attachments/assets/914d3a95-ef25-409c-927b-5d7adfa5d58c" alt="Image 1" width="400"/>
   <img src="https://github.com/user-attachments/assets/2ca9b198-b3e7-4ca0-92c1-bb2475a059a6" alt="Image 2" width="400"/>
 </p>
-Results 3. Comparison of losses for different architectures 
+Results 4. Comparison of losses for different architectures 
 
 
-Results 4. show the predicted internal angles of water with increasing concentration around the static acetone molecule. The distance between the oxygen on the acetone carbonyl and the hydrogens on the water give distances above the standard hydrogen bond distance.
+Results 5. show the predicted internal angles of water with increasing concentration around the static acetone molecule. The distance between the oxygen on the acetone carbonyl and the hydrogens on the water give distances above the standard hydrogen bond distance.
 
 ![predicted geometries](./predicted_geometries.PNG)
 
