@@ -131,11 +131,12 @@ Either a potential energy function is fitted to one geometry and used as a loss 
 
 This was resolved by introducing a "hydrogen bond distance loss" 
 
-* It is important to represent the broad peaks with a variety of geometries when the water concentration is high.
+* It is important to represent the broad peaks with a variety of geometries when the water concentration is high. A method to average the geometries at a concentration is needed or identify these angles and distances in molecular dynamics simulations to validate the results.
 
 * The length of the carbonyl bond needs to be varied in the training data to provide better understanding.
 
 * The broad nature of the carbonyl peak with additions of water show diversity in the geometries of the water acetone system. Other sharper peaks may provide better insight into geometry changes.
+
 
 # References
 
