@@ -117,11 +117,11 @@ Results 4. Comparison of losses for different architectures
 
 ![results](https://github.com/user-attachments/assets/9824d730-70dc-46e1-a855-b86c46ce3f72)
 
-Results 5.
+Results 5. Comparison of bond lengths and angles for the water acetone systems using the VAE
 
 ![created_geometries](https://github.com/user-attachments/assets/9a264118-6c93-4cdb-9fec-db04be70236f)
 
-Results 6. 
+Results 6. Predicted geometries from both the deterministic and stochiastic sampling methods 
 
 # Further work 
 
