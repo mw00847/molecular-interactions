@@ -127,9 +127,11 @@ Results 6. Predicted geometries from both the deterministic and stochiastic samp
 
 * The predicted geometries from the VAE put the hydrogens on the water at a distance of ~3.6Å, this means that running psi4 calculations on these molecules does not give peaks back at around 1700cm-1. is this due to the spread of the training data? Will reducing training geometries with hydrogen bond lengths over 3Å improve the prediction. The same can be said about the internal angles predicted for the water at ~105°.
 
-A hydrogen bond loss of 2Å forced the predicted geometries to have a distance of ~1.9Å from carbonyl oxygen to the hydrogen on water but this seems to constrain the system too much so the distance must be learnt in a better way. 
-
 Either a potential energy function is fitted to one geometry and used as a loss function in the learning. Or another neural network is built to learn the energy term and use this as a loss function in the original VAE.
+
+This was resolved by introducing a "hydrogen bond distance loss" 
+
+* It is important to represent the broad peaks with a variety of geometries when the water concentration is high.
 
 * The length of the carbonyl bond needs to be varied in the training data to provide better understanding.
 
