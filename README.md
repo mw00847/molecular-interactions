@@ -115,17 +115,9 @@ These results suggest that attention-based models including GAT and Transformer 
 Results 4. Comparison of losses for different architectures 
 
 
-Results 5. show the predicted internal angles of water with increasing concentration around the static acetone molecule. The distance between the oxygen on the acetone carbonyl and the hydrogens on the water give distances above the standard hydrogen bond distance.
+Results 5. ![results](https://github.com/user-attachments/assets/9824d730-70dc-46e1-a855-b86c46ce3f72)
 
-![predicted geometries](./predicted_geometries.PNG)
-
-Results 4. Predicted geometry properties from the transformer VAE 
-
-Based upon the angle change and frequency shift a quadratic function is proposed.
-
-![image](https://github.com/user-attachments/assets/635686a7-8701-4b57-8a05-eefa9240118a)
-
-Results 5. Quadratic fit of the frequency shift vs the angle between O1 on acetone and H7 on the water 
+Results 6. ![created_geometries](https://github.com/user-attachments/assets/9a264118-6c93-4cdb-9fec-db04be70236f)
 
 
 # Further work 
