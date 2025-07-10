@@ -69,10 +69,7 @@ The geometries that produce useful carbonyl related vibrations where then filter
 Optuna with Bayesian optimisation identified that a Transformer-based graph architecture (TransformerConv) was best suited to the dataset. This architecture was then used in both the encoder and decoder of a conditional Graph Variational Autoencoder (VAE) to generate new water geometries around a fixed acetone molecule. Penalty terms were applied to constrain O–H bond lengths and H–O–H angles, while a warm-up schedule was used for the Kullback–Leibler (KL) divergence. The optimisation process also tuned loss weights and training epochs to minimize the validation loss. Both deterministic and stochastic sampling approaches were used to produce geometries from the latent space (tramsformer_VAE.py)
 
 # Background
-FTIR blue and red shifts, 
-
 Dilution of acetone with either water or carbon tetrachloride shifts the carbonyl band red or blue, respectively
-
 https://assets.thermofisher.com/TFS-Assets/CAD/Application-Notes/AN50733_E.pdf
 
 "The strong bathochromic shifts observed on methanol OH and acetone CO stretch IR bands are related to hydrogen bonds between these groups. Factor analysis separates the spectra into four acetone and four methanol principal factors." 
