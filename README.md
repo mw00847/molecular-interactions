@@ -20,7 +20,7 @@ This project uses Quantum Chemistry, FTIR Spectroscopy, and Machine Learning to 
 
 # Tools and Frameworks 
 
-PyTorch, PyTorch Geometric, Scikit learn, Psi4, PySCF, GROMACS, NumPy, Pandas, Matplotlib, Git, Linux shell scripting, Google Colab
+PyTorch, PyTorch Geometric, Scikit learn, Psi4, PySCF, GROMACS, NumPy, Pandas, Matplotlib, Git, Linux shell scripting, Google Colab, Optuna Bayesian Optimisation
 
 # Introduction
 
@@ -32,7 +32,7 @@ QM methods are used to sample geometries of water at distances of between 2-4 an
 
 Mixtures of acetone and water were prepared across a range of volume ratios from 10:90 to 90:10 (acetone:water) and the FTIR spectrum was taken for each. The FTIR has been collected on a Nicolet iD7 with a resolution of 2cm-1. 
 
-The carbonyl peak position at each concentration is determined using Voigt peak fitting and the difference between the experimental peak and the QM calculated vibrations are used as to create the "delta matrix" the difference between the experimental values and the QM vibrations. (voigt_peak_centre.py) 
+The carbonyl peak position at each concentration is determined using Voigt peak fitting (voigt_peak_centre.py) and the difference between the experimental peak and the QM calculated vibrations are used as to create the "delta matrix" the difference between the experimental values and the QM vibrations. 
 
 The QM training set is made up of ~1000 conformations of water surrounding a static acetone molecule (create_initial_geometries(G).ipynb)
 
@@ -45,11 +45,11 @@ The QM training set is made up of ~1000 conformations of water surrounding a sta
   Comparison of angle and distance dimensions created in the training data.
 </p>
 
-Quantum mechanical calculations were performed using Psi4 at the MP2 level of theory with the cc-pVDZ basis set. Each geometry underwent vibrational frequency analysis (without reoptimisation), and the resulting dipole moments, total energies, IR intensities, frequencies, and reduced masses were extracted as features for training (see run_QM.py) (coulomb_matrix_function.py)
+Quantum mechanical calculations were performed using Psi4 at the MP2 level of theory with the cc-pVDZ basis set. To generate the QM training data it took ~48 hours using a NVIDIA GeForce RTX 4060 with 8 GB. Each geometry underwent vibrational frequency analysis using no_com and no_reorient, the resulting dipole moments,energies, IR intensities, frequencies, and reduced masses were extracted as features for training (see run_QM.py) (coulomb_matrix_function.py).
 
 Both supervised and unsupervised analysis methods where used to understand the structure and importance of the feature dataset using Principal Component Analysis (PCA) and XGBoost (feature_analysis.py)
 
-The geometries that produce useful carbonyl related vibrations where then filtered and graphs where created using PyTorch Geometric.
+The geometries that produce useful carbonyl related vibrations where then filtered and graphs where created using PyTorch Geometric. Further features including bond lengths and angles where extracted and included in the graph.
 (create_graph_1043_samples.py)
 
 Optuna with Bayesian optimisation identified that a Transformer-based graph architecture (TransformerConv) was best suited to the dataset. This architecture was then used in both the encoder and decoder of a conditional Graph Variational Autoencoder (VAE) to generate new water geometries around a fixed acetone molecule. Penalty terms were applied to constrain O–H bond lengths and H–O–H angles, while a warm-up schedule was used for the Kullback–Leibler (KL) divergence. The optimisation process also tuned loss weights and training epochs to minimize the validation loss. Both deterministic and stochastic sampling approaches were used to produce geometries from the latent space (tramsformer_VAE.py)
