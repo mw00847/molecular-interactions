@@ -22,7 +22,7 @@ PyTorch, PyTorch Geometric, Scikit-learn, Psi4, PySCF, GROMACS, NumPy, Pandas, M
 
 # Introduction
 
-The vibrational frequencies of molecules vary due to their chemical environment, such as changing concentration. This is identified by the broadening and shifting of FTIR peaks. The broadening of the carbonyl peak in FTIR spectra with increasing water content suggests a distribution of possible acetone–water geometries, including both bent and colinear hydrogen-bonded structures as reported in the literature. These shifts arise from a thermal ensemble of structures where hydrogen bonding strength, methyl group orientation, and water position fluctuate. 
+The vibrational frequencies of molecules vary due to their chemical environment, such as changing concentration. This is identified by the broadening and shifting of FTIR peaks. The broadening of the carbonyl peak in FTIR spectra with increasing water content suggests a distribution of possible acetone water geometries, including both bent and colinear hydrogen-bonded structures as reported in the literature. These shifts arise from a thermal ensemble of structures where hydrogen bonding strength, methyl group orientation, and water position fluctuate. 
 
 The aim of this project is to combine FTIR Spectroscopy, Quantum Mechanical (QM) calculations and Machine Learning (ML) methods to understand the changing and plausible geometries of water acetone complexes due to changes in non covalent interactions.
 
