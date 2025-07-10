@@ -92,7 +92,7 @@ The training features were produced with QM using acetone and water at different
 ![Training data shows the position of hydrogen on the energy landscape](./energy_training_data.png)
 Results 2. Training data shows the position of hydrogen on the energy landscape
 
-The PCA plots reveal clear structure–property trends across the dataset. Distances from water hydrogens to the carbonyl oxygen (H7···O=C and H8···O=C) and dipole moments show smooth gradients across PC1, indicating they are key contributors to variance in the data. Angular features are more uniformly distributed, while calculated energy is tightly clustered with a few distinct low-energy outliers. These results suggest that geometric features, particularly distances and dipoles, are more strongly captured in the principal components.
+The PCA plots reveal clear structure property trends across the dataset. Distances from water hydrogens to the carbonyl oxygen (H7···O=C and H8···O=C) and dipole moments show smooth gradients across PC1, indicating they are key contributors to variance in the data. Angular features are more uniformly distributed, while calculated energy is tightly clustered with a few distinct low energy outliers. These results suggest that geometric features, particularly distances and dipoles, are more strongly captured in the principal components.
 
 ![PCA](./PCA_coloured.png)
 Results 3. PCA coloured by feature
