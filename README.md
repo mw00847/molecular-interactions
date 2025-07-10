@@ -2,7 +2,8 @@
 # Understanding the Geometry and Nature of Specific Interactions in Mixtures 
 
 # Project Overview
-This project applies Quantum Chemistry, FTIR Spectroscopy, and Machine Learning to predict solvent solute interaction geometries in acetone water mixtures.
+This project uses Quantum Chemistry, FTIR Spectroscopy, and Machine Learning to uncover how the geometry of acetone–water complexes shifts with changing concentration.
+
 - *Goal:* Understand and predict how water geometries around acetone change with concentration by modelling IR shifts.
 - *Approach:* Generate QM optimised conformations and extract physical and spectral descriptors. Use a Conditional Graph Variational Autoencoder (VAE) to predict water geometries based on IR/QM features. Evaluate how frequently these generated geometries appear in molecular dynamics simulations.
 - *Analogy to Drug Discovery:* This workflow mirrors virtual screening pipelines — generating conformers, scoring based on IR/QM criteria, and filtering based on H-bond geometry. In place of binding affinity scores, the VAE is trained with loss functions that penalise deviations from experimentally derived IR frequency shifts, bond lengths, and angles — analogous to optimising ligand poses against binding or activity targets.
