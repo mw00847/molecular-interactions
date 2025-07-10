@@ -15,6 +15,10 @@ This project applies Quantum Chemistry, FTIR Spectroscopy, and Machine Learning 
 <p align="center">
 </p>
 
+# Tools and Frameworks 
+
+PyTorch, PyTorch Geometric, Scikit-learn, Psi4, PySCF, GROMACS, NumPy, Pandas, Matplotlib, Git, Linux shell scripting, Google Colab
+
 # Introduction
 
 The vibrational frequencies of molecules vary due to their chemical environment, such as changing concentration. This is identified by the broadening and shifting of FTIR peaks. The broadening of the carbonyl peak in FTIR spectra with increasing water content suggests a distribution of possible acetone–water geometries, including both bent and colinear hydrogen-bonded structures as reported in the literature. These shifts arise from a thermal ensemble of structures where hydrogen bonding strength, methyl group orientation, and water position fluctuate. 
