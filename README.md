@@ -4,12 +4,6 @@
 # Project Overview
 This project uses Quantum Chemistry, FTIR Spectroscopy, and Machine Learning to uncover how the geometry of acetone water complexes changes with varying concentration.
 
-# Aims 
-
-* Understand and predict how water geometries around acetone change with concentration by modelling IR shifts.
-* Generate QM optimised conformations and extract physical and spectral descriptors. Use a Conditional Graph Variational Autoencoder (VAE) to predict water geometries based on IR/QM features. Evaluate how frequently these generated geometries appear in molecular dynamics simulations.
-* This workflow mirrors screening pipelines, generating conformers, with scoring based on IR/QM criteria, and filtering based on hydrogen bond geometries. In place of binding affinity scores, the VAE is trained with loss functions that penalise deviations from experimentally derived IR frequency shifts, bond lengths and angles, analogous to optimising ligand poses against binding or activity targets.
-
 <p align="center">
   <img src="./ezgif.com-optimize.gif" alt="3D Rotation" width="400"/>
   <img src="./ezgif.com-animated-gif-maker_line.gif" alt="Line animation" width="400"/>
@@ -17,6 +11,12 @@ This project uses Quantum Chemistry, FTIR Spectroscopy, and Machine Learning to 
 
 <p align="center">
 </p>
+
+# Aims 
+
+* Understand and predict how water geometries around acetone change with concentration by modelling IR shifts.
+* Generate QM optimised conformations and extract physical and spectral descriptors. Use a Conditional Graph Variational Autoencoder (VAE) to predict water geometries based on IR/QM features. Evaluate how frequently these generated geometries appear in molecular dynamics simulations.
+* This workflow mirrors screening pipelines, generating conformers, with scoring based on IR/QM criteria, and filtering based on hydrogen bond geometries. In place of binding affinity scores, the VAE is trained with loss functions that penalise deviations from experimentally derived IR frequency shifts, bond lengths and angles, analogous to optimising ligand poses against binding or activity targets.
 
 # Tools and Frameworks 
 
