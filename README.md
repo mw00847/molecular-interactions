@@ -1,5 +1,5 @@
 
-# Understanding the Geometry and Nature of Specific Interactions in Mixtures 
+# Spectroscopy to structure prediction of acetone and water mixtures using FTIR, QM and ML methods 
 
 # Project Overview
 This project uses Quantum Chemistry, FTIR Spectroscopy, and Machine Learning to uncover how the geometry of acetone water complexes changes with varying concentration.
