@@ -13,35 +13,35 @@ import matplotlib.pyplot as plt
 #the first ~14 frequencies from the QM data are imaginary numbers
 #remove values from ir intensity, reduced masses, frequencies
 
-coulomb_matrices = np.load('/content/drive/My Drive/300425/coulomb_matrices_2912.npy')
+coulomb_matrices = np.load('.npy')
 #flatten coulomb matrix
 coulomb_matrices = coulomb_matrices.reshape(1043, -1)  # Flatten
 print("coulomb matrix shape",coulomb_matrices.shape)
 
-dipoles = np.load('/content/drive/My Drive/300425/dipoles_2912.npy')
+dipoles = np.load('')
 dipoles = dipoles.reshape(-1, 1)
 print("dipoles shape", dipoles.shape)
 
-ir_intensity = np.load('/content/drive/My Drive/300425/ir_intensities_2912.npy')
+ir_intensity = np.load('y')
 ir_intensity = ir_intensity[:, 14:]
 print("ir intensity", ir_intensity.shape)
 
-energies = np.load('/content/drive/My Drive/300425/energies_2912.npy')
+energies = np.load('')
 energies = energies.reshape(-1, 1)
 print("energies shape", energies.shape)
 
-reduced_masses = np.load('/content/drive/My Drive/300425/reduced_masses_all2912.npy')
+reduced_masses = np.load('/y')
 reduced_masses=reduced_masses[:,14:]
 print("reduced masses shape", reduced_masses.shape)
 
-frequencies=np.genfromtxt('/content/drive/My Drive/300425/freq_all2912.csv',delimiter=',',dtype='str')
+frequencies=np.genfromtxt('',delimiter=',',dtype='str')
 # Keep only columns from column 15 onward
 frequencies = frequencies[:, 14:]
 print("frequencies shape", frequencies.shape)
 
 #use these in the graph along with the geometries
-h7_distances=np.load('/content/drive/My Drive/300425/H7_distances.npy')
-h8_distances=np.load('/content/drive/My Drive/300425/H8_distances.npy')
+h7_distances=np.load('.npy')
+h8_distances=np.load('/.npy')
 
 #reshape
 h7_distances=h7_distances.reshape(1043,1)
